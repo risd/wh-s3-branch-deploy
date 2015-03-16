@@ -1,12 +1,15 @@
 {
   "name": "wh-s3-branch-deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper around WebHook Build/Deploy.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ruben Rodriguez",
+  "author": {
+    "name": "Ruben Rodriguez",
+    "url": "http://rubenrodriguez.me"
+  },
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.1.17",
