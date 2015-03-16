@@ -322,15 +322,6 @@ function SyncDirectory () {
         });
         uploader.on('progress', function () {
             if (uploader.progressAmount > 0) {
-                var fraction =
-                        uploader.progressAmount/
-                        uploader.progressTotal;
-                if (fraction > factionInterval) {
-                    factionInterval += 0.05;
-                    var ofTwenty = factionInterval * 20;
-                    console.log(Array(ofTwenty).join('*'));
-                }
-
                 if (uploader.progressAmount ===
                     uploader.progressTotal) {
                     conf.sync = true;
