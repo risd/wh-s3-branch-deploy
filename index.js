@@ -43,11 +43,18 @@ function Deploy (opts) {
 function whDeploy () {
     var spawn = require('child_process').spawn;
     var wh = spawn('wh', ['deploy'], { cwd: process.cwd() });
+    wh.stdout.on('data', function (d) {
+        console.log(d.toString());
+    });
+    wh.stderr.on('data', function (d) {
+        console.log(d.toString());
+    });
     wh.on('close', function () {
         var m = [
             '`wh deploy` completed.'
         ];
         console.log(m.join(''));
+        process.exit(1);
     });
 }
 
